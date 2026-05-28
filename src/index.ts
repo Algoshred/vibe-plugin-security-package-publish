@@ -17,7 +17,7 @@ import type {
 import { CosignSlsaProvider } from "./provider.js";
 
 const PLUGIN_NAME = "security-package-publish";
-const PLUGIN_VERSION = "2026.528.2";
+const PLUGIN_VERSION = "2026.528.4";
 
 export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugin => {
   const provider = new CosignSlsaProvider();
@@ -41,7 +41,7 @@ export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugi
     name: PLUGIN_NAME,
     version: PLUGIN_VERSION,
     description:
-      "Cosign signing + SLSA provenance for the package.publish lifecycle stage. Wave 2 scaffold.",
+      "Cosign sign-blob (key-based or keyless via Fulcio OIDC) + SLSA v1 provenance for the package.publish lifecycle stage.",
     tags: ["backend", "provider", "integration"],
     capabilities: {
       storage: "rw",
