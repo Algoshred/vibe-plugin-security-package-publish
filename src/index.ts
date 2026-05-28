@@ -17,7 +17,7 @@ import type {
 import { CosignSlsaProvider } from "./provider.js";
 
 const PLUGIN_NAME = "security-package-publish";
-const PLUGIN_VERSION = "2026.528.1";
+const PLUGIN_VERSION = "2026.528.2";
 
 export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugin => {
   const provider = new CosignSlsaProvider();
