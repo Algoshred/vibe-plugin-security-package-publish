@@ -1,0 +1,3 @@
+# Formatting-only commit from the BOFF-10675 toolchain migration.
+# Ignored by git blame via: git config blame.ignoreRevsFile .git-blame-ignore-revs
+99ce05681a521365790122afc4b56ce21caf03ee
