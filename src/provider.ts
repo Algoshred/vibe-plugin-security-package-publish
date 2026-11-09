@@ -71,6 +71,10 @@ export class CosignSlsaProvider implements SecurityProvider {
   async ensureToolInstalled(): Promise<void> {
     const dataDir =
       this.host?.getDataDir?.() ?? path.join(os.homedir(), ".boff/vibecontrols");
+    const cosignEntry = TOOLS_MANIFEST.cosign;
+    if (!cosignEntry) {
+      throw new Error("cosign entry missing from TOOLS_MANIFEST");
+    }
     this.cosignPath = await resolveToolPath(
       {
         dataDir,
@@ -81,7 +85,7 @@ export class CosignSlsaProvider implements SecurityProvider {
         },
       },
       "cosign",
-      TOOLS_MANIFEST.cosign,
+      cosignEntry,
     );
   }
 
